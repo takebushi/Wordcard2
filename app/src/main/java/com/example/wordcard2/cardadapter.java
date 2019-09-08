@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+
 public class cardadapter extends ArrayAdapter<card> {
     List<card> mCards;
     private LayoutInflater layoutInflater;
@@ -23,7 +24,7 @@ public class cardadapter extends ArrayAdapter<card> {
 
         mCards = objects;
     }
-    
+
     @Override
     public int getCount(){
         return mCards.size();
