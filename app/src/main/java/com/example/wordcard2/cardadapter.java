@@ -14,12 +14,16 @@ import java.util.List;
 
 public class cardadapter extends ArrayAdapter<card> {
     List<card> mCards;
+    private LayoutInflater layoutInflater;
+
 
     public cardadapter(Context context,int layoutResourceId,List<card>objects){
         super(context,layoutResourceId,objects);
+        layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         mCards = objects;
     }
+    
     @Override
     public int getCount(){
         return mCards.size();
